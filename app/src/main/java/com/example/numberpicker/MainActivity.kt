@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setNp(np3)
         setNp(np4)
         btSetNum.setOnClickListener {
-            val  nums="${np1.value}${np2.value}${np3.value}${np4.value}"
+            val nums="${np1.value}${np2.value}${np3.value}${np4.value}"
             Toast.makeText(this,nums,Toast.LENGTH_LONG).show()
         }
         btUnlock.setOnClickListener {
