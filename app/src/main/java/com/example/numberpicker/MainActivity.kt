@@ -1,11 +1,12 @@
 package com.example.numberpicker
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.Toast
-import kotlin.properties.Delegates
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private val btSetNum by lazy {findViewById<Button>(R.id.btSetNum)}
@@ -32,7 +33,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showMsg(msg:String){
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+        val dlg = AlertDialog.Builder(this)
+        //設定標題 dlg.setTitle(msg)
+        dlg.setMessage(msg)
+        dlg.setCancelable(false)
+        dlg.setPositiveButton("OK"){ dialogInterface: DialogInterface, i: Int -> }
+        dlg.show()
     }
 
     private fun setupUiListener()
