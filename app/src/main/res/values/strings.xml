@@ -5,5 +5,5 @@
     <string name="passwd_not_set">密碼尚未設定</string>
     <string name="passwd_set">密碼已設定</string>
     <string name="correct">密碼正確</string>
-    <string name="error">密碼錯誤</string>
+    <string name="wrong">密碼錯誤</string>
 </resources>

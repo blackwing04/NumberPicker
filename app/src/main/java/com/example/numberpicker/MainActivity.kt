@@ -24,19 +24,18 @@ class MainActivity : AppCompatActivity() {
         setNp(np3)
         setNp(np4)
         setupUiListener()
-
     }
 
-    fun setNp(np:NumberPicker){
+    private fun setNp(np:NumberPicker){
         np.minValue=0
         np.maxValue=9
     }
 
-    fun showMsg(msg:String){
+    private fun showMsg(msg:String){
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
     }
 
-    fun setupUiListener()
+    private fun setupUiListener()
     {
         btSetNum.setOnClickListener {
             passwd=np1.value*1000 + np2.value*100 + np3.value*10 + np4.value
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             if (num == passwd){
                 showMsg(getString(R.string.correct))
             }
-            else  showMsg(getString(R.string.error))
+            else  showMsg(getString(R.string.wrong))
         }
     }
 }
